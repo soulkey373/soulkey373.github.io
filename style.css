@@ -25,6 +25,8 @@
 }
 .banner img{
     width: 100%;
+    height: 500px;
+
 }
 .path{
     display: flex;
@@ -49,10 +51,11 @@
 }
 .about{
     background-color: rgba(231, 233, 233, 0.521);
-    padding: 40px 0px 60px;
+    padding: 20px 90px 60px;
+
 }
 .wrap{
-    width: 960px;
+    width: 1200px;
     margin: auto;
     display: flex;
     text-align: center;
@@ -62,11 +65,12 @@
     padding: 0 10px;
 }
 .about .wrap .item{
-    width: 500px;
+    width: 700px;
     margin: 0 5px;
     text-align: center;
 }
 .about .item img{
+    width: 100%;
     border-radius: 50%;
 }
 .about > h2{
@@ -77,7 +81,7 @@
 }
 .about > p{
     width: 960px;
-    font-size: 35px;
+    font-size: 15px;
     margin: auto;
     text-align: auto;
     text-align: center;
@@ -98,7 +102,7 @@
 }
 .products img{
     width: 100%;
-    vertical-align: bottom;
+    height: 100%;
 }
 .products .pic{
     width: 50%;
@@ -130,12 +134,14 @@
     width: 400px;
     text-align: center;
 }
-.service .item h3{}
+
 .service > p{
     text-align: center;
+    padding: 10px 20px;
 }
 .service .item img{
     width: 100%;
+    height: 50%;
     padding-bottom: 40px;
     padding: 10px;
 }
