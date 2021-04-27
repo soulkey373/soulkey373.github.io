@@ -1,0 +1,50 @@
+
+.wrap{
+    
+    font-size: 15px;
+    padding: 6px 20px;
+    background-color: #af0;
+    margin: 20px;
+    border:1px solid orangered;
+    text-decoration: none;
+    color:rgb(38, 0, 255);
+    display: flex;
+}
+h1{
+
+    display: flex;          /* ★ */
+    height: 260px;
+    align-items: center;    /* ★ */ 
+
+}
+
+img{
+
+    border: 1px solid #af0;
+    padding:
+     1px 3px;
+}
+
+.name{
+    margin: 0;
+    color: #000;
+}
+.head{
+        align-self:center;
+        display: flex;         
+}
+
+div.roger.shaxy.wefiu.eason.virtual{
+
+    color: rgb(13, 19, 1);
+}
+
+div.roger.shaxy.wefiu.eason{
+
+    color: rgb(207, 86, 223);
+}
+
+{
+
+    color: #eee;;
+}
