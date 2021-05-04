@@ -1,0 +1,13 @@
+.CopyRight{
+    display: block;
+    background-color: #f1eeee;
+    width: 960px;
+    height: 80px;
+    margin:auto;
+}
+.CopyRight .Copy{
+    padding: 30px;
+    display: block;
+    text-align: center;
+    font-size: 19px;
+}
