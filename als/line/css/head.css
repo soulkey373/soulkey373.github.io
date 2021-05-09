@@ -1,0 +1,70 @@
+.head{
+    position: fixed;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.95;
+    justify-content: center;
+    align-items: center;
+    font-family: SFPro,Arial,Noto Sans JP,Noto Sans KR,sans-serif;
+    height: 90px;
+    width: 100%;
+    z-index: 50;
+    -webkit-locale: "zh-hant";
+    
+}
+.head h1{
+    display: flex;
+    width: 100px;
+    height: 16px;
+    margin: 0px 25px;
+    flex-grow: 1;
+    height: 20px;
+
+}
+.head ul{
+    display: flex;
+    
+}
+.head .menu1 .item1 li{
+    margin: 0px 3px; 
+}
+
+.head ul li a{
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #1E1E1E;
+    font-size: 16px;
+    width: 150px;
+    height: 20px;
+    font-weight:bold
+}
+.head .menu1{
+
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    /* outline: 2px solid #ccc; */
+    flex-grow: 2;
+    margin: 0px 10px;
+}
+.head .menu2{
+
+    display: flex;
+    /* outline: 2px solid rgb(255, 2, 2); */
+    height: 20px;
+    width: 100px;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin: 0px 25px;
+}
+.head .menu2 ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+}
