@@ -1,0 +1,125 @@
+.container1{
+    width: 1100px;
+    height: 900px;
+    margin: auto; 
+    position: relative;
+    z-index: 1;
+    margin-bottom: 100px;
+}
+.area_1{
+    height: 388px;
+    width: 355px;
+    background-color: #bb0404;
+    display: flex;
+}
+.top{
+    height: 100%;
+    width: 100%; 
+}
+.top1{
+    width:130px;
+    height:120px;
+    font-size: 130px;
+    text-align: center;
+    color: #ffffff;
+    transform: rotate(90deg);
+    margin:-110px 0px;
+
+}
+
+.top1 p{
+    height: 119px;
+}
+
+.top2{
+    width: 200px;
+    margin:-150px 128px;
+}
+.top2 p{
+    font-size: 50px;
+    line-height: 60px;
+    color: rgb(255, 255, 255);
+}
+.bottom{
+
+}
+.bottom .bottom1 {
+    font-size: 25px;
+    width:335px;
+    font-size: 20px;
+    height: 220px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin-left: -355px;
+    margin-top: 148px;
+    padding: 10px;
+}
+.bottom .bottom2 {
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-top: 148px;
+    margin-left: 190px;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+}
+.bottom .bottom2 .yt{
+    margin-left: -50px;
+}
+.bottom .bottom2 .yt img{
+    width: 60px;
+    height: 40px;
+}
+.bottom .bottom3{
+    position: absolute;
+    width: 439px;
+    height: 290px;
+    background-color: #e2e1e1;;
+    margin-left: 305px;
+    margin-top: -388px;
+    z-index: -2;
+}
+.bottom .bottom4{
+    width: 682px;
+    height: 270px;
+    background-color: #e2e1e1;
+    margin-top: 165px;
+    margin-left: -40%;
+    padding: 0px 10px;
+}
+.bottom .bottom4 h2{
+    padding-top: 5px;
+    color:#bb0404;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.bottom .bottom4 h2::after{
+    display: inline-block;
+    content: "";
+    width: 460px;
+    border-bottom: 1px solid #bb0404;
+    margin-bottom: 6px;
+}
+.bottom .bottom4 p{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    width: 120px;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 5px;
+
+}
+.bottom .bottom4 li{
+    color: #686767;
+    font-weight: 700;
+    list-style: none;
+    margin-bottom: 5px;
+}
+.bottom .bottom4 .be ::before{
+    content: "▪   ";
+    color: red;
+}
+.bottom .bottom4 span{
+    color: #bb0404;
+}
