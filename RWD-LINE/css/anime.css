@@ -1,0 +1,31 @@
+@-webkit-keyframes silder{
+    2%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    
+    38%{
+        opacity: 1;
+        transform: scale(1.2)
+    }
+    60%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes silder{
+    2%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    
+    38%{
+        opacity: 1;
+        transform: scale(1.2)
+    }
+    60%{
+        opacity: 0;
+        transform: scale(1);
+    }
+}
