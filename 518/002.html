@@ -15,19 +15,17 @@
     <link rel="stylesheet" href="https://soulkey373.github.io/2021515/css/contain3_style.css">
     <link rel="stylesheet" href="https://soulkey373.github.io/2021515/css/footer_style.css">
     <style>
+        .RWD_option,.logo71,.footer_rwd,.footer_nav,.rwd_mid_nav{
+            display: none;
+        }
         @media screen and (max-width:768px){
             .logo71{
                 display: block;
             }
             .head{
-
                 background-color: rgba(255, 0, 0, 0);
-                width: 25%;
-                margin-left: 50px;
-            }
-            .head img{
-                position: relative;
-                margin-left: 40px;
+                position: absolute;
+
             }
             .head ul {
                 display: none;
@@ -146,7 +144,7 @@
 
                 width: 100%;
             }
-            .footer1,hr,.footer1,.footer,.edge{
+            .head h1 img,.head .menu2 img,.footer1,hr,.footer1,.footer,.edge{
                 display: none;
             }
             .bottom{
@@ -156,14 +154,164 @@
                 margin-top:2100px;
                 margin-left: 30px;
             }
-        
+            .tel_logo {
+                position: absolute;
+                display: flex;
+                width: 350px;
+                height:20px;
+            
+                margin: 0px;
+                
+               
+            }
+            .tel_logo .rwd_logo{
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .RWD_option a span{
+                color: #000;
+                border-bottom: 3px solid #000;
+            }
+            .container2 .bar4 p{
+                display: block;
+                font-size: 48px;
+                margin-top: -470px;
+            }
+            .container3{
+              height: 100%;
+            }
+            .bottom{
+                margin-top: 1500px;
+                margin-right: 30px;
+            }
+            .bottom .itemC{
+                display: flex;
+                height: 121px;
+                width: 335px;
+                margin: 0px;
+                box-sizing: border-box;
+              
+                position: relative;
+                background-color: #F7F8F9;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+                box-shadow: 0px 0px 0px 0px;
+            }
+            .bottom .itemC div{
+                display: none;
+            }
+            .bottom img{
+                width: 62px;
+                height: 62px;
+                padding-right: 2px;
+                border-radius: 10px;
+            }
+            .bottom .itemC h4{
+                display: block;
+                font-size: 20px;
+                position: absolute;
+                margin-left: 100px;
+                font-weight: 700;
+            }
+            .bottom .itemC span{
+                display: block;
+                position: absolute;
+                width: 200px;
+                margin-top: 60px;
+                margin-left: 100px;
+            }
+            .bar3{
+                position: relative;
+                height: 130px;
+                margin-top: -60px;
+            }
+            .bar3 p{
+                display: block;
+                position: absolute;
+                margin-top: 40px;
+                margin-left: 90px;
+            }
+            .footer_rwd{
+                display: block;
+                padding: 10px;
+                position: relative;
+            }
+            .footer_rwd .copy p{
+               display: block;
+               margin-left: 6px;
+            }
+            .footer_rwd .copy span{
+                font-weight: 900;
+            }
+            .footer_rwd .footer_nav {
+               display: flex;
+            }
+            .footer_rwd .footer_nav p{
+              font-size: 15px;
+              margin: 10px 0px;
+              color: #000;
+              font-weight: 900;
+              border-right: 2px solid rgba(0, 0, 0, 0.322);
+              padding-left: 5px;
+              padding-right: 5px;
+            }
+            .footer_rwd .footer_nav .sp{
+                border-right: 2px solid rgba(0, 0, 0, 0);
+            }
 
+            .footer_rwd .friend{
+                width: 175px;
+                border-radius: 4px;
+                border: 1px solid rgba(0,0,0,.1);
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                box-sizing: border-box;
+                margin-left: 20px;
+                margin-top: 5px;
+
+            }
+  
+            .footer_rwd .pic{
+                margin-left:5px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .rwd_mid_nav{
+                position: relative;
+                z-index: 100;
+                display: flex;
+                margin-top: -110px;
+                margin-left: 10px;
+                overflow: hidden;
+            }
+            .rwd_mid_nav li{
+                margin: 0px 2px;
+                font-size: 15px;
+                color:#1E1E1EB3;
+                font-weight: 700;
+                border: 1px solid rgba(34,34,34,.15);
+                border-radius: 50px;
+                background-color: transparent;
+                font-family: SFPro,Arial,Noto Sans JP,Noto Sans KR,sans-serif;
+                padding: 8px 15px;
+            }
+            .rwd_mid_nav .sp_button{
+                background-color: #07b53b;
+                color: rgb(255, 255, 255);
+            }
 
     </style>
 </head>
 <body>
     <div class="head">
-     
+        <div class="tel_logo">
+            <div class="rwd_logo">
+                <img src="https://soulkey373.github.io/als/ass/icon8.png" alt="">
+                <img src="https://soulkey373.github.io/als/ass/icon2.png" alt="">
+            </div>
+        </div>
         <h1><img src="https://soulkey373.github.io/als/ass/icon7.png" alt=""></h1>
         <nav class="menu1" alt="daadsdsd">
             <ul class="item1">
@@ -207,7 +355,7 @@
 
         <nav class="RWD" >
             <ul class="RWD_option">
-                <li><a href="#">Life on LINE</a></li>
+                <li><a href="#"><span>Life on LINE</span></a></li>
                 <li><a href="#">通訊軟體</a></li>
                 <li><a href="#">服務導覽</a></li>
             </ul>
@@ -335,6 +483,14 @@
         </div>
         <div class="bar4">
             <div><p>服務總覽</p></div>
+            <ul class="rwd_mid_nav">
+                <li class="sp_button">All Product</li>
+                <li>通訊</li>
+                <li>娛樂</li>
+                <li>生活</li>
+        
+          
+            </ul>
         </div>
     </div>
 
@@ -354,9 +510,10 @@
                 <li><p>Games</p></li>
             </ul>
         </div>
-        
-        <div class="bottom">
 
+  
+
+        <div class="bottom">
             <div class="itemC">
                 <img src="https://soulkey373.github.io/als/ass/54.png" alt="">
                 <h4>LINE Messenger</h4>
@@ -443,17 +600,28 @@
         <div><p>Screen Saver</p></div>
     </div>
     <hr size="1px" width="76%">
-    <div class="footer1">
-        <p>&copy; LINE Corporation</p>
-        <div><p>常見問題</p></div>
-        Family sites
-        <div><p>常見問題</p></div>
-        <div><p>常見問題</p></div>
-        <div><p>常見問題</p></div>
-        <div> <span> Family sites</span> </div>
-        <div><img src="https://soulkey373.github.io/als/ass/icon6.png" alt=""></div>
-        <div><img src="https://soulkey373.github.io/als/ass/icon5.png" alt=""></div>
-    </div>
+    <div class="footer_rwd">
+        <div class="copy">
 
+            <p>LINE Corporation &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <span>Family sites</span></p>
+            
+        </div>
+            <div class="footer_nav">
+                <p>常見問題</p>
+                <p>服務條款</p>
+                <p>隱私權政策</p>
+                <p class="sp">註冊及移動帳號</p>
+            </div>
+            <div class="pic">
+                <img src="https://soulkey373.github.io/als/ass/icon6.png" alt="">
+                <img src="https://soulkey373.github.io/als/ass/icon5.png" alt="">
+
+            </div>
+        <div class="friend">
+            <img src="/ass/icon11.png" alt="">
+            <p>LINE 加入好友</p> 
+        </div>
+    </div>
+        
 </body>
 </html>
