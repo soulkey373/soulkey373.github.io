@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+    <title>Guess number</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://soulkey373.github.io/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="https://soulkey373.github.io/stylesheets/dashboard.css" rel="stylesheet">
+    <style>
+        .row{
+            display: flex;
+            justify-content: center;
+        }
+        li{
+          text-align: center;
+          line-height: 70px;
+          height: 100px;
+          font-size: 30px;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class=" col-md-12 col-md-3 ">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 ">
+                <div class="btn-group btn-group-justified">
+                  <a id="start" type="button" class="btn btn-default btn-primary">開始遊戲</a>
+                  <a id="restart" type="button" class="btn btn-default">放棄重來</a>
+                  <a id="cheat" type="button" class="btn btn-default btn-danger">看答案</a>
+                </div>
+                <br>
+                <ul id="guessResults" class="list-group">
+                  <li class="list-group-item">
+                    <span id="final" class="label label-danger"></span>
+                    <span class="ans text-primary"></span>                  
+                  </li>
+                  <li class="list-group-item">
+                    <span id="final" class="label label-danger"></span>
+                    <span class="ans text-primary"></span>                  
+                  </li>
+                  <li class="list-group-item">
+                    <span id="final" class="label label-danger"></span>
+                    <span class="ans text-primary"></span>                  
+                  </li>
+                  <li class="list-group-item">
+                    <span id="final" class="label label-danger"></span>
+                    <span class="ans text-primary"></span>                  
+                  </li>
+                  <li class="list-group-item">
+                    <span id="final" class="label label-danger"></span>
+                    <span class="ans text-primary"></span>                  
+                  </li>
+                </ul>
+                <div class="input-group">
+                  <span class="input-group-addon"  id="sizing-addon1">猜答案</span>
+                  <input id="userGuess"   type="text" name="" class="form-control" value="" required="required">
+                  <span class="input-group-btn">
+                    <a id="guess" type="button" class="btn btn-default">猜!</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script>
+      var index = 0;
+      window.onload=function(){
+        document.getElementById("userGuess").disabled=true;
+      }
+        //產生亂數
+        var test="";
+        document.getElementById('start').addEventListener('click',function random(btn){
+          document.getElementById("userGuess").disabled=false;
+        var theArray=[0,1,2,3,4,5,6,7,8,9];
+        function Com(num,arr)
+        {
+        var newArray=[];
+        for(var index=0;index<num;index++)
+        {
+        var n=Math.floor(Math.random()*theArray.length);
+     
+        newArray.push(theArray[n]);
+        theArray.splice(n,1);
+        }
+        return newArray;
+        }
+        var ads =Com(4,theArray)
+        document.getElementById('userGuess').setAttribute("random",ads);
+        test = document.getElementById('userGuess').getAttribute("random");
+        }
+        )
+
+        document.getElementById("guess").addEventListener('click',function(btn){
+        //開始遊戲
+     
+        //幾a幾b
+        var ans = [];
+        ans = test.split(',').map(Number)
+        var gus = [];
+        gus =document.getElementById('userGuess').value.split("").map(Number);;
+        let x = ans.filter(x =>gus.includes(x));
+        let b = x.length;
+        let a = x.filter(x => ans.indexOf(x) == gus.indexOf(x)).length
+        b=b-a;
+
+        //使用者輸入
+
+         document.getElementsByClassName("ans")[index].innerText=gus;
+         document.getElementsByClassName("label ")[index].innerText=`${a}A,${b}B`;
+
+         if(a>3){
+          document.getElementsByClassName("label")[index].className='label label-success';
+          alert("猜對了");
+         }
+         index++;
+         console.log(index);
+        }      )
+
+        document.getElementById("cheat").addEventListener('click',function(btn){
+          alert(test)
+        })
+        document.getElementById("restart").addEventListener('click',function(btn){
+          location.reload(true);
+        })
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <script>
+    </script>
+  </body>
+</html>
