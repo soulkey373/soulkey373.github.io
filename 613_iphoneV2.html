@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        .navbar-brand{
+ 
+        }
+        .navbar-brand img{
+            width: 30px;
+            height: 30px;
+            margin-bottom: 20%;
+            
+        }
+        .navbar-toggler {
+            background-color: FloralWhite;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+        }
+        .navbar-light .navbar-nav .nav-link:hover {
+            color:var(--bs-yellow)
+        }
+        .row .navbar{
+            margin: auto;
+        }
+        .navbar-nav{
+            margin-right: 4%;
+        }
+    </style>
+    <title>購買iPhone與Mac頁面</title>
+  </head>
+  <body>
+    <div class="container ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark ">
+            <div class="container text-center ">
+              <a class="navbar-brand   justify-content-center" href="#"> <img class="text-center" src="https://soulkey373.github.io/iphone_img/clipart2412829.png" alt=""> </a>
+              <button class="navbar-toggler navbar-light text-primary " type="button" data-bs-toggle="collapse"                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+              </button>
+              <div class="collapse navbar-collapse text-primary justify-content-center" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link" aria-current="page" href="#"onclick="myFunction()">IPhone</a>
+                  <a class="nav-link" href="#"onclick="myFunction()" >IPad</a>
+                  <a class="nav-link" href="#"onclick="myFunction()">MacPro</a>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <div class="row  align-items-center">
+          <div class="col-md-6 text-center"><img id="img" src="" class="h-auto w-75"></div>
+          <div class="col-md-6 py-2">
+              <h1></h1>
+              <!-- //顏色 -->
+              <div class="my-2">
+                  <div class="col-12">
+                      <!-- <button type="button" class="btn btn-outline-dark px-5 py-4 m-2"><i class="fas fa-circle fa-2x text-danger"></i><br>紅色</button>
+                      <button type="button" class="btn btn-outline-dark px-5 py-4 m-2"><i class="fas fa-circle fa-2x text-warning"></i><br>黃色</button>
+                      <button type="button" class="btn btn-outline-dark px-5 py-4 m-2"><i class="fas fa-circle fa-2x "></i><br>黑色</button> -->
+                  </div>
+              </div>
+
+              <h1></h1>
+              <!-- 規格 -->
+              <div class=" my-2">
+                  <div class="col-12">
+                      <!-- <button type="button" class="btn btn-outline-dark p-4  m-2">64GB<br>NT$24900</button>
+                      <button type="button" class="btn btn-outline-dark p-4  m-2">128GB<br>NT$26900</button>
+                      <button type="button" class="btn btn-outline-dark p-4  m-2">256GB<br>NT$30400</button> -->
+                  </div>
+              </div>
+
+              <h1></h1>
+              <!-- 價格試算 -->
+              <div class=" my-2">
+                    <!-- <span class="mx-5 h1"> <strong></strong> NT$24900</strong></span> -->
+                    <div class="col-12">
+
+                   </div>
+              </div>
+          </div>
+        </div>   
+    </div>
+
+    <script>
+            // 專業清空事件
+            function myFunction(){
+            document.getElementsByTagName("h1")[0].innerText="";
+            document.getElementsByTagName("h1")[1].innerText="";
+            document.getElementsByTagName("h1")[2].innerText="";
+            document.getElementsByClassName("col-12")[0].innerText="";
+            document.getElementsByClassName("col-12")[1].innerText="";
+            document.getElementsByClassName("col-12")[2].innerText="";
+
+        }
+        let Iphone_Data = [
+            { Color: '紅色', Spec: '64GB', Price: 'NT$24900',Img:'https://soulkey373.github.io/iphone_img/iphone-red.png'},
+            { Color: '紅色', Spec: '128GB', Price: 'NT$26900',Img:'https://soulkey373.github.io/iphone_img/iphone-red.png'},
+            { Color: '紅色', Spec: '256GB', Price: 'NT$30400',Img:'https://soulkey373.github.io/iphone_img/iphone-red.png'},
+            { Color: '黃色', Spec: '64GB', Price: 'NT$24900',Img:'https://soulkey373.github.io/iphone_img/iphone-yellow.png'},
+            { Color: '黃色', Spec: '128GB', Price: 'NT$26900',Img:'https://soulkey373.github.io/iphone_img/iphone-yellow.png'},
+            { Color: '黃色', Spec: '256GB', Price: 'NT$30400',Img:'https://soulkey373.github.io/iphone_img/iphone-yellow.png'},
+            { Color: '黑色', Spec: '64GB', Price: 'NT$24900',Img:'https://soulkey373.github.io/iphone_img/iphone-black.png'},
+            { Color: '黑色', Spec: '128GB', Price: 'NT$26900',Img:'https://soulkey373.github.io/iphone_img/iphone-black.png'},
+            { Color: '黑色', Spec: '256GB', Price: 'NT$30400',Img:'https://soulkey373.github.io/iphone_img/iphone-black.png'}
+        ]
+        let Ipad_Data = [
+            { Color: '太空灰色', Spec: '32GB', Price: 'NT$10900',Img:'https://soulkey373.github.io/iphone_img/ipad-space.png'},
+            { Color: '太空灰色', Spec: '128GB', Price: 'NT$13900',Img:'https://soulkey373.github.io/iphone_img/ipad-space.png'},
+            { Color: '銀色', Spec: '32GB', Price: 'NT$10900',Img:'https://soulkey373.github.io/iphone_img/ipad-silver.png'},
+            { Color: '銀色', Spec: '128GB', Price: 'NT$13900',Img:'https://soulkey373.github.io/iphone_img/ipad-silver.png'},
+            { Color: '金色', Spec: '32GB', Price: 'NT$10900',Img:'https://soulkey373.github.io/iphone_img/ipad-gold.png'},
+            { Color: '金色', Spec: '128GB', Price:'NT$ 13900',Img:'https://soulkey373.github.io/iphone_img/ipad-gold.png'}
+        ]
+        let MacPro_Data = [
+            { Color: '太空灰色', Spec: '256GB', Price: 'NT$51300',Img:'https://soulkey373.github.io/iphone_img/mbp13touch-space.png'},
+            { Color: '太空灰色', Spec: '512GB', Price: 'NT$57300',Img:'hhttps://soulkey373.github.io/iphone_img/mbp13touch-space.png'},
+            { Color: '太空灰色', Spec: '1TB', Price: 'NT$63300',Img:'hhttps://soulkey373.github.io/iphone_img/mbp13touch-space.png'},
+            { Color: '太空灰色', Spec: '2TB', Price: 'NT$75300',Img:'https://soulkey373.github.io/iphone_img/mbp13touch-space.png'},
+            { Color: '銀色', Spec: '256GB', Price: 'NT$51300',Img:'https://soulkey373.github.io/iphone_img/mbp13touch-silver.png'},
+            { Color: '銀色', Spec: '512GB', Price: 'NT$57300',Img:'https://soulkey373.github.io/iphone_img/mbp13touch-silver.png'},
+            { Color: '銀色', Spec: '1TB', Price: 'NT$63300',Img:'https://soulkey373.github.io/iphone_img/mbp13touch-silver.png'},
+            { Color: '銀色', Spec: '2TB', Price: 'NT$75300',Img:'https://soulkey373.github.io/iphone_img/mbp13touch-silver.png'}
+        ]
+
+        //iphone按鈕 註冊事件區域
+        document.getElementsByClassName("nav-link")[0].addEventListener('click',function(btn){
+
+            //r1 預設r1為初始的預覽圖
+            let data_red = Iphone_Data.find(x=>x.Color=="紅色")
+            let data_yellow = Iphone_Data.find(x=>x.Color=="黃色")
+            let data_black = Iphone_Data.find(x=>x.Color=="黑色")
+            document.getElementById('img').setAttribute("src",data_red.Img)
+            document.getElementsByTagName('h1')[0].innerText="顏色";
+            document.getElementsByTagName('h1')[1].innerText="規格";
+            document.getElementsByTagName('h1')[2].innerText="價格試算";
+
+            var coL12 = document.getElementsByClassName('col-12')
+            //生成 最後面價格試算的tagName
+            var newSpan = document.createElement("span");
+            var newStrong = document.createElement("strong");
+            newSpan.className="mx-5 h1";
+            newSpan.append(newStrong);
+            coL12[2].append(newSpan)
+            //生成顏色區塊
+            for(let index = 0 ; index<3;index++){
+                var newBtn = document.createElement("button")
+                var newSvg = document.createElement("i")
+                var newBr = document.createElement("br")
+                var newH3 =document.createElement("h3")
+                newBtn.type = "button";
+                //添加btn_changer()事件
+                newBtn.onclick=function(){btn_changer(index)};
+                newBtn.className = "btn btn-outline-dark py-4 px-5  m-2";
+                newSvg.className = "fas fa-circle fa-2x";
+                newBtn.append(newSvg)
+                newBtn.append(newBr)
+                newBtn.append(newH3)
+                coL12[0].append(newBtn)
+            }
+            //幫i標籤 添加顏色屬性
+            let r2 =  document.getElementsByTagName("i");
+            r2[0].className+=" text-danger";
+            r2[1].className+=" text-warning";
+            //幫h5添加換行標籤以及文字說明
+            var r3 = document.getElementsByTagName("h3");
+            r3[0].innerText ="紅色";
+            r3[1].innerText = "黃色";
+            r3[2].innerText = "黑色";
+
+            //生成規格區塊
+            for(let index1 = 0 ; index1<3;index1++){
+
+                var newBtn = document.createElement("button")
+                var newH5 =document.createElement("h5")
+                var newH3 =document.createElement("h3")
+                newBtn.onclick=function(){ btn_Price(index1)};
+                newBtn.type = "button";
+                newBtn.className = "btn btn-outline-dark py-4 px-5  m-2 ";
+                newBtn.append(newH5)
+                newBtn.append(newH3)
+                coL12[1].append(newBtn)
+            }
+            //幫第二區塊(規格)添加h3標籤裡的文字說明
+            var r4 = document.getElementsByTagName("h3");
+            r4[3].innerText =Iphone_Data.find(x=>x.Spec=='64GB').Spec;
+            r4[4].innerText =Iphone_Data.find(x=>x.Spec=='128GB').Spec;
+            r4[5].innerText =Iphone_Data.find(x=>x.Spec=='256GB').Spec;
+            // 幫H3後面的H5添加價格
+            var r5 = document.getElementsByTagName("h5");
+            r5[0].innerText =Iphone_Data.find(x=>x.Spec=='64GB').Price;
+            r5[1].innerText =Iphone_Data.find(x=>x.Spec=='128GB').Price;
+            r5[2].innerText =Iphone_Data.find(x=>x.Spec=='256GB').Price;
+
+            //換手機圖片事件
+            function btn_changer(index){
+                var r6 = r3[index].innerText
+                var r7 = Iphone_Data.find(x=>x.Color==r6)
+                document.getElementById('img').setAttribute("src",r7.Img)
+  
+            }
+            //試算售價事件
+            function btn_Price(index1){
+                var r8 = r4[index1+3].innerText;
+                newStrong.innerText = r5[index1].innerText =Iphone_Data.find(x=>x.Spec==r8).Price;      
+            }
+        }
+        )
+        //ipad
+        document.getElementsByClassName("nav-link")[1].addEventListener('click',function(btn){
+             
+            //r1 預設r1為初始的預覽圖
+            let data_space = Ipad_Data.find(x=>x.Color=="太空灰色")
+            let data_sliver= Ipad_Data.find(x=>x.Color=="銀色")
+            let data_gold = Ipad_Data.find(x=>x.Color=="金色")
+            document.getElementById('img').setAttribute("src",data_space.Img)
+            document.getElementsByTagName('h1')[0].innerText="顏色";
+            document.getElementsByTagName('h1')[1].innerText="規格";
+            document.getElementsByTagName('h1')[2].innerText="價格試算";
+
+            var coL12 = document.getElementsByClassName('col-12')
+            //生成 最後面價格試算的tagName
+            var newSpan = document.createElement("span");
+            var newStrong = document.createElement("strong");
+            newSpan.className="mx-5 h1";
+            newSpan.append(newStrong);
+            coL12[2].append(newSpan)
+            //生成顏色區塊
+            for(let index = 0 ; index<3;index++){
+                var newBtn = document.createElement("button")
+                var newSvg = document.createElement("i")
+                var newBr = document.createElement("br")
+                var newH3 =document.createElement("h3")
+                newBtn.type = "button";
+                //添加btn_changer()事件
+                newBtn.onclick=function(){btn_changer(index)};
+                newBtn.className = "btn btn-outline-dark py-4 px-5  m-2";
+                newSvg.className = "fas fa-circle fa-2x";
+                newBtn.append(newSvg)
+                newBtn.append(newBr)
+                newBtn.append(newH3)
+                coL12[0].append(newBtn)
+            }
+            //幫i標籤 添加顏色屬性
+            let r2 =  document.getElementsByTagName("i");
+            r2[0].className+=" text-muted";
+            r2[1].className+=" text-primary";
+            r2[2].className+=" text-warning";
+            //幫h5添加換行標籤以及文字說明
+            var r3 = document.getElementsByTagName("h3");
+            r3[0].innerText ="太空灰色";
+            r3[1].innerText = "銀色";
+            r3[2].innerText = "金色";
+
+            //生成規格區塊
+            for(let index1 = 0 ; index1<2;index1++){
+
+                var newBtn = document.createElement("button")
+                var newH5 =document.createElement("h5")
+                var newH3 =document.createElement("h3")
+                newBtn.onclick=function(){ btn_Price(index1)};
+                newBtn.type = "button";
+                newBtn.className = "btn btn-outline-dark py-4 px-5  m-2 ";
+                newBtn.append(newH5)
+                newBtn.append(newH3)
+                coL12[1].append(newBtn)
+            }
+            //幫第二區塊(規格)添加h3標籤裡的文字說明
+            var r4 = document.getElementsByTagName("h3");
+            r4[3].innerText = Ipad_Data.find(x=>x.Spec=='32GB').Spec;
+            r4[4].innerText = Ipad_Data.find(x=>x.Spec=='128GB').Spec;
+
+            // 幫H3後面的H5添加價格
+            var r5 = document.getElementsByTagName("h5");
+            r5[0].innerText = Ipad_Data.find(x=>x.Spec=='32GB').Price;
+            r5[1].innerText = Ipad_Data.find(x=>x.Spec=='128GB').Price;
+ 
+
+            //換手機圖片事件
+            function btn_changer(index){
+                var r6 = r3[index].innerText
+                var r7 =  Ipad_Data.find(x=>x.Color==r6)
+                document.getElementById('img').setAttribute("src",r7.Img)
+  
+            }
+            //試算售價事件
+            function btn_Price(index1){
+                var r8 = r4[index1+3].innerText;
+                newStrong.innerText = r5[index1].innerText =Ipad_Data.find(x=>x.Spec==r8).Price; 
+            }
+             }
+        )
+        document.getElementsByClassName("nav-link")[2].addEventListener('click',function(btn){
+             
+             //r1 預設r1為初始的預覽圖
+             let data_space =  MacPro_Data.find(x=>x.Color=="太空灰色")
+             let data_sliver=  MacPro_Data.find(x=>x.Color=="銀色")
+             document.getElementById('img').setAttribute("src", MacPro_Data.Img)
+             document.getElementsByTagName('h1')[0].innerText="顏色";
+             document.getElementsByTagName('h1')[1].innerText="規格";
+             document.getElementsByTagName('h1')[2].innerText="價格試算";
+ 
+             var coL12 = document.getElementsByClassName('col-12')
+             //生成 最後面價格試算的tagName
+             var newSpan = document.createElement("span");
+             var newStrong = document.createElement("strong");
+             newSpan.className="mx-5 h1";
+             newSpan.append(newStrong);
+             coL12[2].append(newSpan)
+             //生成顏色區塊
+             for(let index = 0 ; index<2;index++){
+                 var newBtn = document.createElement("button")
+                 var newSvg = document.createElement("i")
+                 var newBr = document.createElement("br")
+                 var newH3 =document.createElement("h3")
+                 newBtn.type = "button";
+                 //添加btn_changer()事件
+                 newBtn.onclick=function(){btn_changer(index)};
+                 newBtn.className = "btn btn-outline-dark py-4 px-5  m-2";
+                 newSvg.className = "fas fa-circle fa-2x";
+                 newBtn.append(newSvg)
+                 newBtn.append(newBr)
+                 newBtn.append(newH3)
+                 coL12[0].append(newBtn)
+             }
+             //幫i標籤 添加顏色屬性
+             let r2 =  document.getElementsByTagName("i");
+             r2[0].className+=" text-success";
+             r2[1].className+=" text-info";
+             //幫h5添加換行標籤以及文字說明
+             var r3 = document.getElementsByTagName("h3");
+             r3[0].innerText ="太空灰色";
+             r3[1].innerText = "銀色";
+ 
+             //生成規格區塊
+             for(let index1 = 0 ; index1<4;index1++){
+ 
+                 var newBtn = document.createElement("button")
+                 var newH5 =document.createElement("h5")
+                 var newH3 =document.createElement("h3")
+                 newBtn.onclick=function(){ btn_Price(index1)};
+                 newBtn.type = "button";
+                 newBtn.className = "btn btn-outline-dark py-4 px-5  m-2 ";
+                 newBtn.append(newH5)
+                 newBtn.append(newH3)
+                 coL12[1].append(newBtn)
+             }
+             //幫第二區塊(規格)添加h3標籤裡的文字說明
+             var r4 = document.getElementsByTagName("h3");
+             r4[2].innerText = MacPro_Data.find(x=>x.Spec=='256GB').Spec;
+             r4[3].innerText = MacPro_Data.find(x=>x.Spec=='512GB').Spec;
+             r4[4].innerText = MacPro_Data.find(x=>x.Spec=='1TB').Spec;
+             r4[5].innerText = MacPro_Data.find(x=>x.Spec=='2TB').Spec;
+ 
+             // 幫H3後面的H5添加價格
+             var r5 = document.getElementsByTagName("h5");
+             r5[0].innerText = MacPro_Data.find(x=>x.Spec=='256GB').Price;
+             r5[1].innerText = MacPro_Data.find(x=>x.Spec=='512GB').Price;
+             r5[2].innerText = MacPro_Data.find(x=>x.Spec=='1TB').Price;
+             r5[3].innerText = MacPro_Data.find(x=>x.Spec=='2TB').Price;
+  
+ 
+             //換手機圖片事件
+             function btn_changer(index){
+                 var r6 = r3[index].innerText
+                 var r7 =  MacPro_Data.find(x=>x.Color==r6)
+                 document.getElementById('img').setAttribute("src",r7.Img)
+   
+             }
+             //試算售價事件
+             function btn_Price(index1){
+                 var r8 = r4[index1+2].innerText;
+                 newStrong.innerText = r5[index1].innerText = MacPro_Data.find(x=>x.Spec==r8).Price; 
+             }
+ 
+         }
+   
+         )
+        
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
