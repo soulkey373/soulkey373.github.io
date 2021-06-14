@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="display-4 text-center  text-primary">台灣水庫即時水情</h1>
+    <div class="jumbotron text-center">
+        
+
+        <div id="container" class=" "></div>
+    </div>
+
+    <script>
+
+        let data = [
+            { Name: '新山水庫(基隆)1', Capacity: '901.48萬立方公尺', Percent: '89.9%', Days: '99天' },
+            { Name: '翡翠水庫(台北、新北)2', Capacity: '901.48萬立方公尺', Percent: '89.9%', Days: '99天' },
+            { Name: '石門水庫(新北、桃園、新竹)3', Capacity: '901.48萬立方公尺', Percent: '89.9%', Days: '99天' },
+            { Name: '永和山水庫(新竹、苗栗)4', Capacity: '901.48萬立方公尺', Percent: '89.9%', Days: '99天' },
+            { Name: '夏天的水庫', Capacity: '901.48萬立方公尺', Percent: '89.9%', Days: '99天' }
+        ]
+
+        let container = document.getElementById("container");
+        let table = document.createElement("table");
+        let thead = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+
+        table.classList.add('table')
+
+        window.onload = function () {
+
+            createTable(data);
+
+            container.appendChild(table);
+        }
+
+        function createTable(data) {
+            addRow(thead, data[0], true);
+
+            data.forEach(item => {
+                addRow(tbody, item, false)
+            });
+        }
+
+        function addRow(target, col, isThead) {
+            console.log('before')
+            console.log(col)
+            col = isThead ? Object.keys(col) : Object.keys(col).map(x => col[x])
+            console.log('after')
+            console.log(col)
+            let tr = document.createElement('tr');
+            col.forEach(item => {
+                let td = document.createElement('td');
+                td.innerText = item;
+                tr.appendChild(td);
+            })
+
+            target.appendChild(tr);
+            table.appendChild(target);
+        }
+
+    </script>
+</body>
+
+</html>
