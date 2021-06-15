@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        body{
+          font-family: SFPro,Arial,Noto Sans JP,Noto Sans KR,sans-serif;
+          font-weight: 400;
+        }
+        .col-3{
+          border: 2px solid #ddd000;
+          width: 200px;
+          height: 400px;
+          margin: 10%;
+        }
+        img{
+          width: 100%;
+        }
+        .banner{
+          width: 100%;
+         
+        }
+        .swiper-slider{
+          position: relative;
+
+        }
+        @media (min-width:300px) { 
+          .swiper-slide{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          h1{ 
+            position: absolute;
+            display: inline-block;
+            font-size: 3rem;
+            color: aliceblue;
+            text-align: center;
+            opacity: 0.9;
+            background-color: rgba(169, 169, 169, 0.603);
+          }
+        }
+        @media (min-width: 1200px) { 
+          h1{
+          position: absolute;
+          font-size: 10em;
+          color: aliceblue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0.9;
+          }
+        }
+
+       
+    </style>
+    <title>測試網頁</title>
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">橘園山谷</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">主頁</a>
+                <a class="nav-link" href="https://forms.gle/ExP4enhiG2zyS5QL9">訂購專區</a>
+                <a class="nav-link" href="https://www.facebook.com/groups/261352524728806">社團連結</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+                <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <!-- <img class="logo" src="/OrangeCampImg/logo.png" alt=""> -->
+              <h1>橘園山谷秘境</h1>
+              <img class="banner_img" src="https://soulkey373.github.io/OrangeCampImg/013.jpg" alt="">
+             
+            </div>
+            <div class="swiper-slide">
+              <h1>山中小木屋</h1>
+              <img class="banner_img" src="https://soulkey373.github.io/OrangeCampImg/012.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h1>現採柑橘</h1>
+              <img class="banner_img" src="https://soulkey373.github.io/OrangeCampImg/014.jpg" alt="">
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+        
+        <div class="row justify-content-center">
+          <div class="card mx-5 my-2 p-2" style="width: 18rem;">
+            <img class="card-img-top" src="https://soulkey373.github.io/OrangeCampImg/001.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-center">
+                #無毒栽培檸檬酵素清潔劑<br>
+                #澳洲茶樹精油<br>
+                #精油殺菌驅蚊噴霧劑<br>
+                #皮膚水份補充檸檬純露
+              </p>
+            </div>
+          </div>
+          <div class="card mx-5 my-2 p-2" style="width: 18rem;">
+            <img class="card-img-top" src="https://soulkey373.github.io/OrangeCampImg/006.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-center">
+                #無毒栽培檸檬酵素清潔劑<br>
+                #澳洲茶樹精油<br>
+                #精油殺菌驅蚊噴霧劑<br>
+                #皮膚水份補充檸檬純露
+              </p>
+            </div>
+          </div>
+          <div class="card mx-5 my-2 p-2" style="width: 18rem;">
+            <img class="card-img-top" src="https://soulkey373.github.io/OrangeCampImg/005.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-center">
+                #無毒栽培檸檬酵素清潔劑<br>
+                #澳洲茶樹精油<br>
+                #精油殺菌驅蚊噴霧劑<br>
+                #皮膚水份補充檸檬純露
+              </p>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-5 my-2 p-2" style="width: 18rem;">
+            <img class="card-img-top" src="https://soulkey373.github.io/OrangeCampImg/004.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-center">
+                #無毒栽培檸檬酵素清潔劑<br>
+                #澳洲茶樹精油<br>
+                #精油殺菌驅蚊噴霧劑<br>
+                #皮膚水份補充檸檬純露
+              </p>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-5 my-2 p-2" style="width: 18rem;">
+            <img class="card-img-top" src="https://soulkey373.github.io/OrangeCampImg/007.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-center">
+                #無毒栽培檸檬酵素清潔劑<br>
+                #澳洲茶樹精油<br>
+                #精油殺菌驅蚊噴霧劑<br>
+                #皮膚水份補充檸檬純露
+              </p>
+              </p>
+            </div>
+          </div>
+          <div class="card mx-5 my-2 p-2" style="width: 18rem;">
+            <img class="card-img-top" src="https://soulkey373.github.io/OrangeCampImg/008.jpg" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text text-center">
+                #無毒栽培檸檬酵素清潔劑<br>
+                #澳洲茶樹精油<br>
+                #精油殺菌驅蚊噴霧劑<br>
+                #皮膚水份補充檸檬純露
+              </p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <footer class="page-footer font-small btn-secondary pt-4">
+
+          <!-- Footer Links -->
+          <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+              <!-- Grid column -->
+              <div class="col-md-12 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <h5 class="text-uppercase">橘園山谷</h5>
+                <p>露營 住宿 烤肉 團康</p>
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none pb-3">
+
+
+
+            </div>
+     
+
+          </div>
+          <!-- Footer Links -->
+
+          <!-- Copyright -->
+          <div class="footer-copyright text-center py-3">
+            © 2021 Copyright: 橘園山谷
+           
+          </div>
+          <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+            </div>
+    <script>
+
+    </script>
+
+
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+    
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
