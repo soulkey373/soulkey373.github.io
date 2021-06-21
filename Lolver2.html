@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        /* *{
+        font-family: 'Poppins', sans-serif;
+        } */
+        .card-body{
+            height: 200px;
+            overflow: hidden;
+        }
+        p{
+            display: block;
+            height: 70px;
+            overflow: hidden;
+        }
+        .btn{
+            margin-bottom: 10%;
+        }
+        .swal-overlay {
+            background-color: rgb(0, 0, 0);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="jumbotron text-center bg-info">
+            <h1 class="display-4 text-light">英雄聯盟</h1>  
+        </div>
+        <div class="row text-center d-flex justify-content-center ">
+
+        </div>
+
+    </div>
+    <template id='cardPizza' >
+        <div class="card m-2" style="width:18rem">
+            <img src="" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary"> 詳細介紹</a>
+                <a href="" class="btn btn-danger" data-toggle="modal" data-target="#myModal"> 影片介紹</a>
+            </div>
+        </div>
+    </template>
+
+    <!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  >
+    <div class="modal-dialog" >
+        <div class="modal-content text-center"style="width:700px">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">
+                    標題
+                </h4>
+            </div>
+            <div class="modal-body  ">
+                <div class="container ">             
+                    <iframe width="500px" height="300px"  src="https://www.youtube.com/embed/h8X5qzzIc9A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">close </button>
+             
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+    <script>
+
+    
+      let lolArray=[]
+      let lolArrayData=[]
+      const url="https://ddragon.leagueoflegends.com/cdn/10.22.1/data/zh_TW/champion.json"
+
+      window.onload=function(){
+        let xhr = new XMLHttpRequest();
+        xhr.onload=function () {
+        lolArray = JSON.parse(this.responseText);
+        lolArrayData=lolArray.data
+        fetchLOL();
+        }
+        xhr.open('GET', url);
+        xhr.send(); 
+
+      }
+      
+
+
+      function fetchLOL()
+      {
+
+        let abs = Object.values(lolArrayData);
+        let row  = document.getElementsByClassName("row")[0];
+        let card = document.getElementById("cardPizza");
+        let p    = document.getElementsByClassName("card-text")[0];
+        //modal
+        let cardYoutube = document.getElementById("myModal");
+        let h4 = document.getElementsByClassName("modal-title")[0]
+        abs.forEach(function (item) {
+        let cloneContent = card.content.cloneNode(true);
+        cloneContent.querySelector('h5').innerText = item.name;
+        cloneContent.querySelector('p').innerText = item.blurb;
+        cloneContent.querySelector('img').src = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item.id}_1.jpg`;
+        cloneContent.querySelector("a").addEventListener("click", function(){
+            swal({
+                title:  item.name,
+                text: `${item.blurb}\n
+                        血量    :${item.stats.hp}\n
+                        移動速度:${item.stats.movespeed}\n
+                        護甲:${item.stats.armor}\n
+                        法術格擋:${item.stats.spellblock}\n
+                        攻擊範圍:${item.stats.attackrange}\n
+                `,
+                icon: `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${item.id}_1.jpg`,
+                });
+        });
+
+
+        cloneContent.querySelector(".btn-danger").addEventListener("click", function(){
+            h4.innerText=item.name
+
+        });
+        
+        row.append(cloneContent);
+        })
+    }
+    
+
+        
+
+    </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
