@@ -1,0 +1,428 @@
+<!doctype html>
+<link rel="shortcut icon" href="#"/>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://unpkg.com/better-scroll@latest/dist/better-scroll.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Hello, world!</title>
+    <style>
+        *{
+          font-family:  'Montserrat', "Microsoft Yahei", "Noto Sans CJK SC", 'Noto Sans TC', "Droid Sans Fallback";
+        }
+        body{
+            background-color: rgb(148, 147, 147);
+        }
+        th{
+            width: 200px;     
+            text-align: center;
+           
+        }
+        td{
+            text-align: center;
+            height: 100px;
+            width: 100px;
+            background: none;
+            transition: 0.5s;
+        }
+        .active:hover{
+          transform: translate(-5px,-5px);
+          text-shadow: 2px 2px 4px #000000;
+          background:#c5c5c5;
+          cursor: pointer;
+        }
+        .scrollspy-example{
+            height:80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bg-dark{
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .swiper-wrapper {
+  		/* 設定幻燈片寬度跟高度 */
+            width: 320px;
+            height: 200px;          
+  	    }
+        .swiper-slide{
+          color: rgb(255, 255, 255);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: 0.5s;
+          width:320px;
+        }
+        .swiper-slide:hover{
+          transform: translate(-5px,-5px);
+          color: #1E90FF;
+        }
+        .swiper-slide h1{
+          width:320px;
+          text-align: center;
+        }
+        span{
+          
+          font-size: 5px;
+          color:rgb(255, 255, 255);
+        }
+        span:hover{
+          color: rgb(255, 255, 255);
+          line-height: 15px;
+        }
+        img{
+          width: 100px;
+          height: 100px;
+        }
+        i:hover{
+          color:#dd0000 ;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center">
+        <div class="row m-5">
+          <div class="col-md-4 bg-dark">
+            <h5></h5>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><h1>1月</h1></div>
+                  <div class="swiper-slide"><h1>2月</h1></div>
+                  <div class="swiper-slide"><h1>3月</h1></div>
+                  <div class="swiper-slide"><h1>4月</h1></div>
+                  <div class="swiper-slide"><h1>5月</h1></div>
+                  <div class="swiper-slide"><h1>6月</h1></div>
+                  <div class="swiper-slide"><h1>7月</h1></div>
+                  <div class="swiper-slide"><h1>8月</h1></div>
+                  <div class="swiper-slide"><h1>9月</h1></div>
+                  <div class="swiper-slide"><h1>10月</h1></div>
+                  <div class="swiper-slide"><h1>11月</h1></div>
+                  <div class="swiper-slide"><h1>12月</h1></div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-8 bg-light">
+            <table class="table table-light">             
+                <h1 id="Titel_date" class="text-center py-1"></h1>
+                <img src="https://images-ext-2.discordapp.net/external/9PkjLXR4r5qWk-fAq0UWi0TRgz42OjUA6O-gy4__XL0/https/media.discordapp.net/attachments/667666816209911820/854683418284392488/271017.gif" alt="">
+                <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal" >增添事件</button>
+                <!-- <button class="btn btn-info p-1 "onclick="InsertEvent()">產生紀錄</button> -->
+                <thead>
+                    <th scope="col">SUN</th>
+                    <th scope="col">MON</th>
+                    <th scope="col">TUE</th>
+                    <th scope="col">WED</th>
+                    <th scope="col">THU</th>
+                    <th scope="col">FRI</th>
+                    <th scope="col">SAT</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+          </div>
+        </div>
+    </div> 
+    <!-- 增添事件的 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">時間戳記</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">time:</label>
+                <input type="date" class="form-control" id="recipient-time">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">TODO:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="NewEvent()" data-bs-dismiss="modal">送出</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 彈出的修改 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">時間戳記</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">TODO:</label>
+                <h4></h4>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="deletes()">刪除關閉</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"onclick="editd()">修改送出</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+      <script>
+        window.onload=function(){
+          NowMonth = new Date(`${NowMonth.getFullYear()},${parseInt(document.querySelectorAll('h1')[swiper.activeIndex].innerText)},1`);
+          //生成tdtr
+          TdTr();
+          //顯示每個月的日期
+          Calendar();
+          //幫每個假日上紅色
+          RedHoliday();
+          //顯示表頭的日期
+          ChangeTitleDate();
+          //讀取json資料存在local storage
+          CatchEveryTd()
+          //插入localstorag的事件
+          InsertEvent()
+          //事件冒泡
+          SingleTdEvent()
+        }
+        var tdbox=[]
+        var todo=[]
+        var TdList=[]
+        //接收Axcio
+        var Record=[]
+        var storageArray=[]
+        //接收預先做好的JSON
+        axios.get('https://raw.githubusercontent.com/soulkey373/Fiststore/main/futer.json')
+          .then(function(response){
+                Record=response.data
+                if (localStorage.getItem('data') === null || localStorage.getItem('data')===[]) {              
+                  //存進接收到的Record陣列
+                  localStorage.setItem('data',JSON.stringify(Record))
+                  //取出localStorage放進storageArray裡
+                  storageArray = JSON.parse(localStorage.getItem('data'));
+                  console.log("接收到新的local資料了")
+              } 
+              })
+
+    
+           // 初始化日曆變成2021/1/1
+           var NowMonth = new Date();
+           // <!-- swiper -->
+           const swiper = new Swiper('.swiper-container', {
+              initialSlide :  NowMonth.getMonth(),
+              // Optional parameters
+              direction: 'vertical',
+              loop: true,
+              // If we need pagination
+              pagination: {
+                el: '.swiper-pagination',
+              },
+
+              // Navigation arrows
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+
+              // And if we need scrollbar
+              scrollbar: {
+                el: '.swiper-scrollbar',
+              },
+            });
+           swiper.on('slideChange',function(){
+            NowMonth = new Date(`${NowMonth.getFullYear()},${parseInt(document.querySelectorAll('h1')[swiper.activeIndex].innerText)},1`);
+            Calendar();
+            RedHoliday();
+            ChangeTitleDate();
+            CatchEveryTd();
+            InsertEvent();
+            SingleTdEvent();
+          })
+        
+           //生成Tobody裡面tr td
+           function TdTr(){
+            for(let i=0;i<6;i++){
+            var tr = document.createElement('tr');
+            for(let j=0;j<7;j++){
+              var td = document.createElement('td');
+              tr.appendChild(td)
+            }
+            document.querySelector('tbody').appendChild(tr);
+          }
+        } 
+          //動態產生每個月的日期
+           function Calendar(){
+          //計算當前月份的最後一天
+          var last = new Date(NowMonth.getFullYear(),NowMonth.getMonth()+1,0)
+          var lastDay = last.getDate();
+          var AllTd= document.querySelectorAll('td');
+          //每次換月份就清空
+          AllTd.forEach(x=>
+            x.innerText=""
+          )
+          for(let i = 1 ; i<=lastDay; i++){
+             AllTd[NowMonth.getDay()+i-1].innerText=i;
+             AllTd[NowMonth.getDay()+i-1].setAttribute('class','active')
+          }
+        }
+           //幫假日上紅色
+           function RedHoliday(){
+            document.querySelectorAll('td').forEach(function(btn){
+            var holiday= new Date(`${NowMonth.getFullYear()},${parseInt(document.querySelectorAll('h1')[swiper.activeIndex].innerText)},${btn.innerText}`)
+                      if(btn.innerText==null || btn.innerText==""){
+                          return;
+                      }
+                      else if(holiday.getDay()==6 ||holiday.getDay()==0){            
+                          btn.style.color='red'
+                      }
+                
+             })
+           }
+           //顯示最上層date
+           function ChangeTitleDate(){
+             document.getElementById('Titel_date').innerText=`${NowMonth.getFullYear()}年${parseInt(document.querySelectorAll('h1')[swiper.activeIndex].innerText)}月`;
+           }
+           //得到每個月的日期總數
+           function CatchEveryTd(){
+             tdbox.length=0
+             document.querySelectorAll(".active").forEach(function(x){   
+              if(x.innerText==null || x.innerText==""){
+                x.removeAttribute('class','actives')
+                return;
+              }  
+                x.setAttribute('TdId',x.innerText)
+                tdbox.push(x.innerText)                      
+             })
+           }
+           //插入每個存在資料庫的行程
+           function InsertEvent(){
+              storageArray = JSON.parse(localStorage.getItem('data'));
+              var book = storageArray.schedule.filter(function(x){return x.month== NowMonth.getMonth()+1});
+              var cook=document.querySelectorAll(".active")
+              var i = 0;
+              for( i ; i<tdbox.length;i++){
+
+                if( book[i]== undefined || book[i]== null || book[i]==NaN){
+
+                }
+                else if(book[i].day == cook[book[i].day-1].getAttribute("tdid")){ 
+                // console.log(cook[book[i].day-1])
+                // console.log(`${book[i].month}月${book[i].day}日   事件:${book[i].todo}`)
+                cook[book[i].day-1].innerHTML+=`<br><button class="btn text-light bg-info m-1"><span id="lists" month="${book[i].month}" day="${book[i].day}"prevalue="${book[i].todo}">${book[i].todo}<span>`
+                }
+              }
+           }
+           //新增行程
+           function NewEvent(){
+            var text=[];
+            text.length=0;
+            var timeModel=document.querySelector("input").value.split("-")
+            var textModel=document.querySelector("textarea").value
+            text={
+                "year":`${parseInt(timeModel[0])}`,
+                "month":`${parseInt(timeModel[1])}`,
+                "day":`${parseInt(timeModel[2])}`,
+                "todo":`${textModel}`
+            }
+            storageArray.schedule.push(text);
+            //存進接收到的Record陣列
+            localStorage.setItem('data',JSON.stringify(storageArray))
+            //取出localStorage放進storageArray裡
+            storageArray = JSON.parse(localStorage.getItem('data'));
+            Calendar();
+            InsertEvent();
+            SingleTdEvent();
+        }
+          //幫每個事件註冊事件
+           function SingleTdEvent(){
+            document.querySelectorAll("#lists").forEach((item) => {
+                item.addEventListener('click', (event) => {
+                  // console.log(event.target.innerText)
+                  // console.log(event.target.getAttribute("month"))
+                  // console.log(event.target.getAttribute("day"))
+                var myModal = new bootstrap.Modal(document.getElementById('deleteModal'))
+                var mTodo=document.getElementsByTagName("h4")[0]
+                var mLabel = document.getElementsByTagName("label")[2]
+                var myInput = document.getElementsByTagName("textarea")[1]
+                    mLabel.innerText=`${event.target.getAttribute("month")}月-${event.target.getAttribute("day")}日`  
+                    mTodo.innerText=`${event.target.getAttribute("prevalue")}`
+                    myInput.value=event.target.innerText
+                    myModal.show();
+
+                    storageArray = JSON.parse(localStorage.getItem('data'));
+                    var indexEvent= storageArray.schedule.findIndex((x)=>x.day==event.target.getAttribute("day") && x.month==event.target.getAttribute("month")&& x.todo==event.target.innerText)
+                   
+                    // storageArray.schedule.splice(indexEvent,1)
+                    // localStorage.setItem('data',JSON.stringify(storageArray))
+                },false)
+              })
+           }
+           //MODEL裡的刪除事件
+           function deletes(){
+                var myInput = document.getElementsByTagName("textarea")[1]
+       
+                storageArray = JSON.parse(localStorage.getItem('data'));
+                var indexEvent= storageArray.schedule.findIndex((x)=> x.todo==myInput.value)
+                storageArray.schedule.splice(indexEvent,1)
+                localStorage.setItem('data',JSON.stringify(storageArray))
+                Calendar();
+                InsertEvent();
+                SingleTdEvent()
+           }
+           //MODEL裡的修改事件
+           function editd(){
+                var text=[];
+                storageArray = JSON.parse(localStorage.getItem('data'));
+                var mTodo=document.getElementsByTagName("h4")[0]
+                var myInput = document.getElementsByTagName("textarea")[1]
+                var mLabel  = document.getElementsByTagName("label")[2]
+                var mDate=mLabel.innerText.split("-")
+                var mDay    = parseInt(mDate[1])
+                var mMonth    = parseInt(mDate[0])
+   
+                var indexEvent= storageArray.schedule.findIndex((x)=>x.month==mMonth && x.day==mDay && x.todo==mTodo.innerText)
+                storageArray.schedule.splice(indexEvent,1)
+                text={
+                "year":"2021",
+                "month":mMonth,
+                "day"  :mDay,
+                "todo": myInput.value
+                }
+                storageArray.schedule.push(text);
+                localStorage.setItem('data',JSON.stringify(storageArray))
+                Calendar();
+                InsertEvent();
+                SingleTdEvent()
+           }
+
+      </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>
+  
+  </body>
+</html>
