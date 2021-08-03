@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>banner</title>
+    <style>
+      * {
+            letter-spacing: initial !important;
+            font-family: Roboto,sans-serif;
+       
+        }
+        .banner{
+            position: relative;      
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.376)),url(https://soulkey373.github.io/WorkFinalblock/image/Post_Header.jpg);
+            background-size: cover;
+            background-position: center;
+            /* min-height: 74vh; */
+            padding: 250px;
+            width: 100%;
+
+        }
+
+        h1{
+          font-family: "Montserrat", Sans-serif;
+          color: #ffffff;
+          font-size: 100px;
+          text-align: center;
+          font-weight: 600;
+          line-height: 1em;
+          transition: 1s;
+        }
+        .wrap{
+          box-sizing: border-box;
+        }
+        /* 中間的內容區域 */
+        .wrap .container-xl{
+          display: flex;
+        
+        }
+        .wrap .container-xl h2{
+          font-size: 38px;
+          color: #fc8d61;
+          font-weight: bold;
+        
+        }
+        .wrap .container-xl h5{
+          color: #000000;
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 1.5em;
+        }
+        .wrap .container-xl p{
+          padding:0px 110px;
+   
+        }
+        /* 第二個banner區 */
+        .wrap .container-fluid{
+          background-image: url(https://soulkey373.github.io/WorkFinalblock/image/iStock-176819706-scaled-1.jpg);
+          background-size: cover;
+          background-position: center;
+          padding: 100px 400px;
+          display: flex;
+          justify-content: center;
+        }
+        .wrap .container-fluid .main_content {
+          background-color: rgba(255, 255, 255, 0.904);
+          min-width: 340px;
+          transition: 1s;
+        }
+        .wrap .container-fluid .main_content p{
+          font-size: 16px;
+          color: #3e3e3e;
+          word-break: keep-all;
+        }
+        .col-6{
+          text-align: center;
+        }
+        .col-sm-6 a{
+          color: #fc8d61;
+          text-decoration: none;
+        }
+        .down{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .down span{
+          display: block;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin: 20px;
+          background-color:#fc8d61 ;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .down span i{
+          display: block;
+         color: blanchedalmond;
+
+        }
+        /* footer區 */
+        .footer{
+          width: 100%;
+          height: 220px;
+          background-color: #61effc;
+        }
+        /* 右下角的對話框 */
+        .messagebox{
+          position: fixed;
+          right: 0;
+          bottom:0;
+          width: 100px;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #message{
+
+          width: 60px;
+          height: 60px;
+        }
+        @media screen and (max-width:768px){
+          h1{
+          font-size: 38px;
+          line-height: 1.2em;
+        }
+        .banner{
+            /* min-height: 35vh; */
+            padding: 29px;
+            min-height: 288px;
+        }
+        nav{
+          display: flex;
+          justify-content: space-around;
+        }
+        /* 中間的內容區域 */
+        .wrap .container-xl p{
+          padding:0px 0px;
+   
+        }
+        .wrap .container-fluid{
+      
+          padding: 40px 20px;
+        }
+        /* 下面五個icon */
+        .down{
+          display: none;
+        }
+        }
+    </style>
+  </head>
+  <body>
+
+    <nav class="header p-3">
+      <h3 class="text-start text-primary">這裡是logo</h3>
+      <h3 class="text-center text-access">這裡是選單</h3>
+    </nav>
+    <div class="banner">
+        <div class="banner_text">
+          <h1>Invest In The Sharing <br>Economy</h1>
+        </div>
+    </div>
+    <div class="wrap mt-5">
+      <div class="container-xl  mb-5">
+        <section>
+          <h2 class="text-center m-4">Investing in Sustainability, Means Investing in Our Future.</h2>
+            <div class="main_content text-center px-5">
+              <p class="mt-2 ">In 2020, Ruckify enlisted The Right Environment’s help to study the environmental impact of producing something as simple as a ladder. The results of this study validated our core belief that the sharing-economy will ultimately have a profound effect on our planet. Through our Marketplace, Ruckify was able to prevent 8,330 Metric Tonnes of Co2 emissions from ever being produced, that’s equivalent to powering 1000 homes for a year. As our Marketplace continues to grow, so will our impact on the current environmental crisis.</p>
+              <p class="mt-2">Founded in Ottawa, Canada, in 2017, Ruckify is a rent anything Marketplace allowing individuals and businesses to rent out their everyday items, earn money, and experience more while reducing their environmental impact through sustainable consumerism.</p>
+            </div>
+        </section>
+      </div>
+      <div class="container-fluid ">
+        <div class="main_content text-center p-4">
+          <p class="pt-3">With its industry-changing technology Ruckify is poised to lead the way for peer-to-peer sharing in communities around the world. Ruckify provides its members the opportunity to monetize the assets they own and accessibility to items and experiences within their local communities. Through its subsidiary company, Better Software, Ruckify offers a fully integrated software-as-service solution that helps small businesses improve and simplify their operations.</p>
+        </div>
+      </div>
+
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-sm-6 col-12 d-flex justify-content-center align-items-center">
+            <div class="MidelContent text-center ">
+              <h2 class="text-dark">Revolutionizing the Sharing Economy</h2>
+              <p>Ruckify provides users with the freedom to rent what they want when they want without the restrictions of time, storage, price, or availability. With industry-changing technology, Ruckify has paved the way for peer-to-peer sharing within North America.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-12">
+            <img src="https://soulkey373.github.io/WorkFinalblock/image/product_mock.png" class="w-100 ">
+          </div>
+
+          <div class="col-sm-6 col-12">
+            <img src="https://soulkey373.github.io/WorkFinalblock/image/login.jpg" class="w-100" >
+          </div>
+  
+          <div class="col-sm-6 col-12 d-flex justify-content-center align-items-center">
+            <div class="MidelContent text-center">
+              <h2 class="text-dark">The Sharing Economy is a Growing Industry</h2>
+              <p>The sharing economy continues to grow as consumer trends continue to shift and favor a more sustainable way of life. The global sharing economy’s value is predicted to increase to <a href="#">335 billion U.S dollars by 2025</a> , from only 15 billion U.S dollars in 2014.</p>
+            </div>
+         </div>
+         <div class="col-12 down">
+          <span><i class="fab fa-instagram"></i></span>
+          <span><i class="fab fa-facebook-f"></i></span>
+          <span><i class="fab fa-twitter"></i></span>
+          <span><i class="fab fa-pinterest"></i></span>
+          <span><i class="fab fa-linkedin-in"></i></span>
+          <span><i class="fab fa-tiktok"></i></span>
+         </div>
+      </div>
+
+    </div>
+    <div class="footer">
+
+    </div>
+    <div class="messagebox"><img id="message" src="https://soulkey373.github.io/WorkFinalblock/image/iconmonstr-facebook-messenger-1.svg" alt=""></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script> 
+  </body>
+</html>
